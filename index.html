@@ -1,0 +1,43 @@
+<!-- ***** HTMLのメイン部分 ***** -->
+<table class="table_height" border=1>
+	<tr id="height01">
+		<td>Add Word</td>
+	</tr>
+	<tr id="height02">
+		<td>Make Idea</td>
+	</tr>
+	<tr id="height03">
+		<td>Data List</td>
+	</tr>
+</table>
+
+<!-- ***** javascript ***** -->
+//①ページが読み込まれた際の処理
+window.onload = function() {
+
+  //②画面のサイズを取得
+  var screen_height = window.innerHeight;
+
+  //③メニューの高さを計算
+  menu_height = Math.floor(screen_height/3,0);
+
+  //④各メニューにサイズを割当る
+  document.getElementById("height01").style.height = menu_height + "px";
+  document.getElementById("height02").style.height = menu_height + "px";
+  document.getElementById("height03").style.height = menu_height + "px";
+}
+
+
+<!-- ***** css ***** -->
+.table_height {
+    height: 100%;
+    width: 100%;
+    background-color: Black;
+    font-size: 35px;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    color:white;
+    /*****　⑤vertical-align:middleを適用。ただし記載しなくても中央に寄ります　******/
+    vertical-align: middle;;
+    text-align: center;
+}
